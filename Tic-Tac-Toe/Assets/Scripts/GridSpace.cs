@@ -19,7 +19,7 @@ public class GridSpace : MonoBehaviour
         player = GameManager.instance.playerTurn;
         gridText.text = player;
         gridButton.interactable = false;
-
+        GameManager.instance.EndTurnEvent();
         return this;
     }
 }
