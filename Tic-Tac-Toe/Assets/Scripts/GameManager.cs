@@ -186,6 +186,7 @@ public class GameManager : MonoBehaviour
         if (history.Count == 0) return;
         //delete last history
         //var backup = history[history.Count - 1];
+        playerPressGrid -= 1;
         undoState = true;
         SwitchTurn();
         redoHistory.Add(history[history.Count - 1]);
@@ -202,7 +203,7 @@ public class GameManager : MonoBehaviour
             undoState = false;
             return;
         }
-
+        playerPressGrid += 1;
         redoHistory[0].transform.Find("Text").GetComponent<Text>().text = playerTurn;
         SwitchTurn();
         redoHistory[0].GetComponent<Button>().interactable = false;
