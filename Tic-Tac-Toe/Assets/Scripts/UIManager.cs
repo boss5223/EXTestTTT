@@ -16,6 +16,13 @@ public class UIManager : MonoBehaviour
     public Color turnerColor;
     public Color unturnColor;
 
+    [Header("UI")]
+    public Transform finishPanel;
+
+    [Header("Control")]
+    public Button undoBTN;
+    public Button redoBTN;
+
     private void Awake()
     {
         instance = this;
